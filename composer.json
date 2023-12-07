@@ -1,0 +1,17 @@
+{
+    "name": "hexlet/code",
+    "description": "1 project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Evgenii.Goncharov",
+            "email": "hichi411@gmail.com"
+        }
+    ],
+    "require": {}
+}
