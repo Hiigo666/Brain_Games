@@ -2,7 +2,8 @@
 
 namespace Php\Project\Cli ;
 
-function line($text) {
+function line($text)
+{
     print_r($text);
     print_r("\n");
 }
