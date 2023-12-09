@@ -1,5 +1,10 @@
 #!/usr/bin/env php
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
 
-$greeting = "Welcome to the Brain Games!";
-print_r($greeting);
+use function Cli\line;
+use function Cli\prompt;
+
+line('Welcome to the Brain Game!');
+$name = prompt('May I have your name?');
+line("Hello, %s!", $name);

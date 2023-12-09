@@ -1,13 +1,13 @@
 <?php
 
-namespace BrainGames\Cli;
+namespace Php\Project\Cli ;
 
 function line($text) {
     print_r($text);
+    print_r("\n");
 }
 
 function promt()
 {
-    $name = trim(fgets(STDIN));
-    echo "Hello, {$name}!\n";
+    return trim(fgets(STDIN));
 }
