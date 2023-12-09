@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function Cli\line;
+use function Cli\prompt;
+
+line('Добро пожаловать в интеллектуальные игры!');
+$name = prompt('Можно узнать ваше имя?');
+line("Привет %s!", $name);
+
+line("Ответьте «yes», если число четное, в противном случае ответьте «no»");
+$countAnswer = 0;
+while ($countAnswer < 3) {
+    $quest = mt_rand(0, 100);
+line("Question: {$quest}");
+if($quest % 2 === 0) {
+    $tryAnswer = "yes";
+}else {
+    $tryAnswer = "no";
+}
+$answer = prompt('Ваш ответ?');
+if(strtolower($answer) === $tryAnswer) {
+    line('Correct!');
+    $countAnswer++;
+} else {
+    line("'{$answer}' is wrong answer ;(. Correct answer was '{$tryAnswer}'.");
+    line("Try again {$name}");
+    exit;
+}
+}
+line("Congratulations, {$name}!");
+exit;
