@@ -1,9 +1,0 @@
-#!/usr/bin/env php
-<?php
-require_once __DIR__ . '/../vendor/autoload.php';
-
-use function Cli\line;
-use function Cli\prompt;
-use function Engine\name;
-
-name('Добро пожаловать в интеллектуальные игры!');
