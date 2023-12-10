@@ -4,13 +4,28 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use function Cli\line;
 use function Cli\prompt;
-use function Php\Project\Test\stroka ;
+use function Php\Project\Test\greeting;
+use function Php\Project\Test\question;
+use function Php\Project\Test\End;
 
-stroka('Добро пожаловать в интеллектуальные игры!');
-$name = prompt('Можно узнать ваше имя?');
-line("Привет %s!", $name);
-
-line("Ответьте «yes», если число четное, в противном случае ответьте «no»");
+$name = greeting();
+line('Каков результат выражения?');
+$count = 0;
+while ($count < 3) {
+[$task, $quest, $truResult] = question();
+line($task);
+$answer = prompt('Ваш отмет?');
+if ($answer == $truResult) {
+    line('Правильно!');
+    $count += 1;
+} else {
+    line("Ответ '$answer' не верный, правильный ответ будет '$truResult'");
+    line("Попробуйте еще раз {$name}!");
+    exit;
+}
+}
+End($name);
+/*line("Ответьте «yes», если число четное, в противном случае ответьте «no»");
 $countAnswer = 0;
 while ($countAnswer < 3) {
     $quest = mt_rand(0, 100);
@@ -31,4 +46,4 @@ if(strtolower($answer) === $tryAnswer) {
 }
 }
 line("Congratulations, {$name}!");
-exit;
+exit;*/

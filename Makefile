@@ -9,4 +9,4 @@ lint:
 brain-even:
 	./bin/brain-even
 test:
-	./bin/test
+	./src/test
