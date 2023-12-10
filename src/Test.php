@@ -2,8 +2,9 @@
 
 namespace Php\Project\Test;
 
-function stroka($text)
+function welcome($text)
 {
-    print_r($text);
-    print_r("\n");
+    line('Добро пожаловать в интеллектуальные игры!');
+    $name = prompt('Можно узнать ваше имя?');
+    line("Привет %s!", $name);
 }

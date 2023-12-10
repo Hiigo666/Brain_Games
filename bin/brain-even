@@ -6,7 +6,7 @@ use function Cli\line;
 use function Cli\prompt;
 use function Php\Project\Test\stroka ;
 
-stroka('Добро пожаловать в интеллектуальные игры!');
+line('Добро пожаловать в интеллектуальные игры!');
 $name = prompt('Можно узнать ваше имя?');
 line("Привет %s!", $name);
 
