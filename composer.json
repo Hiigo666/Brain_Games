@@ -4,10 +4,7 @@
     "license": "MIT",
     "type": "project",
     "autoload": {
-        "files": ["src/Test.php"],
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
+        "files": ["src/Cli.php", "src/Test.php"]
     },
     "authors": [
         {
