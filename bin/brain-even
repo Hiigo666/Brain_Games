@@ -4,7 +4,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use function Cli\line;
 use function Cli\prompt;
-use function Test\stroka;
+use function Php\Project\Test\stroka ;
 
 stroka('Добро пожаловать в интеллектуальные игры!');
 $name = prompt('Можно узнать ваше имя?');

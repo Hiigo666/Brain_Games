@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\Test ;
+namespace Php\Project\Test;
 
 function stroka($text)
 {
