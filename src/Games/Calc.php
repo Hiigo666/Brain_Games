@@ -26,7 +26,7 @@ switch($randomoperation){
     default:
         echo "Invalid operator";
 }
-    $question = "Пример:{$quest}";
+    $question = "{$quest}";
     $return = [$question, $result];
     return $return;
 

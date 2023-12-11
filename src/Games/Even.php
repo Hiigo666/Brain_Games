@@ -5,7 +5,6 @@ namespace Games\even;
 use function cli\line;
 use function cli\prompt;
 
-#line("Ответьте «yes», если число четное, в противном случае ответьте «no»");
 function even(){
 $countAnswer = 0;
     $quest = mt_rand(0, 100);

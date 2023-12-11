@@ -5,10 +5,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use function Project\Engine\examination;
 use function Project\Engine\greeting;
 use function Project\Engine\End;
-use function Project\Engine\intro;
+use function Games\Calc\calc;
 
 $name = greeting();
-intro(2);
-examination($name, 2);
+examination($name, 1);
 End($name);
-

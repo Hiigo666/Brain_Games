@@ -18,7 +18,14 @@ function greeting()
     return $name;
 }
 
-
+function intro($game)
+{
+    switch ($game) {
+        case 2:
+            line("Ответьте «yes», если число четное, в противном случае ответьте «no»");
+            break;
+    }
+}
 function End($user)
 {
     line("Поздравляю {$user}! Игра пройдена!");
