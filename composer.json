@@ -4,7 +4,13 @@
     "license": "MIT",
     "type": "project",
     "autoload": {
-        "files": ["src/Cli.php", "src/Test.php"]
+        "files": [
+        "src/Cli.php",
+        "src/Test.php",
+        "src/Engine.php",
+        "src/Games/Calc.php",
+        "src/Games/Even.php"
+    ]
     },
     "authors": [
         {
@@ -18,7 +24,8 @@
     "bin": [
     "bin/brain-games",
     "bin/brain-even",
-    "bin/test"
+    "bin/test",
+    "bin/brain-calc"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.8"

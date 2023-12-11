@@ -10,3 +10,5 @@ brain-even:
 	./bin/brain-even
 test:
 	./src/test
+brain-calc:
+	./bin/brain-calc

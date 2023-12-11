@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function Project\Engine\examination;
+use function Project\Engine\greeting;
+use function Project\Engine\End;
+use function Games\Calc\calc;
+
+$name = greeting();
+examination($name, 1);
+End($name);

@@ -2,29 +2,14 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function Cli\line;
-use function Cli\prompt;
-use function Php\Project\Test\greeting;
-use function Php\Project\Test\question;
-use function Php\Project\Test\End;
+use function Project\Engine\examination;
+use function Project\Engine\greeting;
+use function Project\Engine\End;
 
 $name = greeting();
-line('Каков результат выражения?');
-$count = 0;
-while ($count < 3) {
-[$task, $quest, $truResult] = question();
-line($task);
-$answer = prompt('Ваш отмет?');
-if ($answer == $truResult) {
-    line('Правильно!');
-    $count += 1;
-} else {
-    line("Ответ '$answer' не верный, правильный ответ будет '$truResult'");
-    line("Попробуйте еще раз {$name}!");
-    exit;
-}
-}
+examination($name, 2);
 End($name);
+
 /*line("Ответьте «yes», если число четное, в противном случае ответьте «no»");
 $countAnswer = 0;
 while ($countAnswer < 3) {

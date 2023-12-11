@@ -1,23 +1,12 @@
 <?php
 
-namespace Php\Project\Test;
+namespace Games\Calc;
 
 use function cli\line;
 use function cli\prompt;
 
 
-$name = "";
-
-/* function greeting()
-{
-    line('Добро пожаловать в интеллектуальные игры!');
-    $name = prompt('Можно узнать ваше имя?');
-    line("Привет %s!", $name);
-    return $name;
-}
-*/
-
-/* function question()
+function calc()
 {
     $operators = ["+","-","*"];
     $number1 = mt_rand(0, 20);
@@ -38,13 +27,7 @@ switch($randomoperation){
         echo "Invalid operator";
 }
     $question = "Пример:{$quest}";
-    $return = [$question, $quest, $result];
+    $return = [$question, $result];
     return $return;
 
 }
-
-function End($user)
-{
-    line("Поздравляю {$user}! Игра пройдена!");
-}
-*/
