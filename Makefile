@@ -12,3 +12,5 @@ test:
 	./src/test
 brain-calc:
 	./bin/brain-calc
+brain-nod:
+	./bin/brain-nod
