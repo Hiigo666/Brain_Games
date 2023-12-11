@@ -6,11 +6,11 @@
     "autoload": {
         "files": [
         "src/Cli.php",
-        "src/Test.php",
         "src/Engine.php",
         "src/Games/Calc.php",
         "src/Games/Even.php",
-        "src/Games/Nod.php"
+        "src/Games/Nod.php",
+        "src/Games/Prog.php"
     ]
     },
     "authors": [
@@ -25,9 +25,9 @@
     "bin": [
     "bin/brain-games",
     "bin/brain-even",
-    "bin/test",
     "bin/brain-calc",
-    "bin/brain-nod"
+    "bin/brain-nod",
+    "bin/brain-progression"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.8"

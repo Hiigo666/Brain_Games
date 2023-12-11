@@ -9,6 +9,7 @@ use function Project\Engine\greeting;
 use function Games\Calc\calc;
 use function Games\Even\even;
 use function Games\Nod\nod;
+use function Games\Prog\prog;
 
 function greeting()
 {
@@ -42,6 +43,8 @@ function examination($name, $game)
         [$task, $truResult] = even();
     } elseif ($game == 3) {
         [$task, $truResult] = nod();
+    } elseif ($game == 4) {
+        [$task, $truResult] = prog();
     }
     line("Вопрос: {$task}");
     $answer = prompt('Ваш ответ?');
