@@ -20,9 +20,21 @@ function greeting()
 function intro($game)
 {
     switch ($game) {
+        case 1:
+            line("Каков результат выражения?");
+            break;
         case 2:
             line("Ответьте «yes», если число четное, в противном случае ответьте «no»");
             break;
+        case 3:
+            line("Найдите наибольший общий делитель данных чисел.");
+            break;      
+        case 4:
+            line("Какое число пропущено в прогрессии?");
+            break;  
+        case 5:
+            line("Ответьте «yes», если данное число простое. В противном случае ответьте «no».");
+            break;           
     }
 }
 function End($user)
