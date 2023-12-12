@@ -4,13 +4,11 @@ namespace Project\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function Project\Engine\examination;
-use function Project\Engine\greeting;
 use function Games\Calc\calc;
 use function Games\Even\even;
 use function Games\Nod\nod;
 use function Games\Prog\prog;
-
+use function Games\Prime\prime;
 function greeting()
 {
     line('Добро пожаловать в интеллектуальные игры!');
@@ -45,6 +43,8 @@ function examination($name, $game)
         [$task, $truResult] = nod();
     } elseif ($game == 4) {
         [$task, $truResult] = prog();
+    } elseif ($game == 5) {
+        [$task, $truResult] = prime();
     }
     line("Вопрос: {$task}");
     $answer = prompt('Ваш ответ?');

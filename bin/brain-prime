@@ -5,7 +5,9 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use function Project\Engine\examination;
 use function Project\Engine\greeting;
 use function Project\Engine\End;
+use function Project\Engine\intro;
 
 $name = greeting();
-examination($name, 4);
+intro(2);
+examination($name, 5);
 End($name);

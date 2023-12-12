@@ -2,9 +2,6 @@
 
 namespace Games\Prog;
 
-use function cli\line;
-use function cli\prompt;
-
 function prog()
 {
 $lenArr = mt_rand(5, 10);
