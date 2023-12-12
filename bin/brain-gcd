@@ -11,6 +11,3 @@ $name = greeting();
 intro(3);
 examination($name, 3);
 End($name);
-#$name = greeting();
-#examination($name, 3);
-#End($name);
