@@ -8,7 +8,7 @@ function calc()
     $number1 = mt_rand(0, 20);
     $number2 = mt_rand(0, 10);
     $randomoperation = $operators[mt_rand(0,2)];
-    $quest = $number1.$randomoperation.$number2;
+    $quest = "{$number1} {$randomoperation} {$number2}";
 switch($randomoperation){
     case "+":
         $result = $number1 + $number2;
