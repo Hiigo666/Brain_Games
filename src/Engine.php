@@ -24,7 +24,7 @@ function intro($game)
             line("What is the result of the expression?");
             break;
         case 2:
-            line('Answer "yes" if the number is even, otherwise answer "no"');
+            line('Answer "yes" if the number is even, otherwise answer "no".');
             break;
         case 3:
             line("Find the greatest common divisor of given numbers.");
