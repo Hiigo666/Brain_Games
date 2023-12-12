@@ -2,9 +2,6 @@
 
 namespace Games\Nod;
 
-use function cli\line;
-use function cli\prompt;
-
 function nod()
 {
     $number1 = mt_rand(1, 100);
