@@ -6,7 +6,7 @@ function nod()
 {
     $number1 = mt_rand(1, 100);
     $number2 = mt_rand(1, 100);
-    $question = "'{$number1}' '{$number2}'";
+    $question = "{$number1} {$number2}";
     $maxNumber = max($number1, $number2);
     $nod = 1;
     for ($i = 1; $i <= $maxNumber; $i++) {
