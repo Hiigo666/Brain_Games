@@ -18,7 +18,7 @@ function greeting()
     return $name;
 }
 
-function intro($game)
+function intro(?Game $game)
 {
     switch ($game) {
         case 1:
@@ -38,7 +38,7 @@ function intro($game)
             break;
     }
 }
-function End($user)
+function End(?User $user)
 {
     line("Congratulations, {$user}!");
 }
