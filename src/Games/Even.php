@@ -1,6 +1,6 @@
 <?php
 
-namespace Games\even;
+namespace Games\Even;
 
 function even()
 {

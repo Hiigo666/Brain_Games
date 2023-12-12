@@ -4,6 +4,7 @@ namespace Games\Calc;
 
 function calc()
 {
+    $result = 0;
     $operators = ["+", "-", "*"];
     $number1 = mt_rand(0, 20);
     $number2 = mt_rand(0, 10);
