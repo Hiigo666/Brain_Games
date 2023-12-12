@@ -44,8 +44,10 @@ function End(?string $user)
 }
 
 
-function examination($name, $game)
+function examination(?string $name, ?int $game)
 {
+    $truResult = "";
+    $task = "";
     $count = 0;
     while ($count < 3) {
         if ($game == 1) {
