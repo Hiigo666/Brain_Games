@@ -10,7 +10,7 @@ function nod()
     $maxNumber = max($number1, $number2);
     $nod = 1;
     for ($i = 1; $i <= $maxNumber; $i++) {
-        if($number1 % $i === 0 && $number2 % $i === 0) {
+        if ($number1 % $i === 0 && $number2 % $i === 0) {
             $nod = $i;
         }
     }

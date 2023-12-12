@@ -6,7 +6,7 @@ function prime()
 {
     $trueAnswer = "yes";
     $symbol = mt_rand(1, 20);
-    for($i = 2; $i <= sqrt($symbol); $i++) {
+    for ($i = 2; $i <= sqrt($symbol); $i++) {
         if ($symbol % $i == 0) {
             $trueAnswer = "no";
         }
