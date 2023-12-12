@@ -11,9 +11,9 @@ use function Games\Prog\prog;
 use function Games\Prime\prime;
 function greeting()
 {
-    line('Добро пожаловать в интеллектуальные игры!');
-    $name = prompt('Можно узнать ваше имя?');
-    line("Привет %s!", $name);
+    line("Welcome to the Brain Games!");
+    $name = prompt('May I have your name?', false, ' ');
+    line("Hello, %s!", $name);
     return $name;
 }
 
@@ -21,25 +21,25 @@ function intro($game)
 {
     switch ($game) {
         case 1:
-            line("Каков результат выражения?");
+            line("What is the result of the expression?");
             break;
         case 2:
-            line("Ответьте «yes», если число четное, в противном случае ответьте «no»");
+            line('Answer "yes" if the number is even, otherwise answer "no"');
             break;
         case 3:
-            line("Найдите наибольший общий делитель данных чисел.");
+            line("Find the greatest common divisor of given numbers.");
             break;      
         case 4:
-            line("Какое число пропущено в прогрессии?");
+            line("What number is missing in the progression?");
             break;  
         case 5:
-            line("Ответьте «yes», если данное число простое. В противном случае ответьте «no».");
+            line('Answer "yes" if given number is prime. Otherwise answer "no".');
             break;           
     }
 }
 function End($user)
 {
-    line("Поздравляю {$user}! Игра пройдена!");
+    line("Congratulations, {$user}!");
 }
 
 
@@ -58,16 +58,14 @@ function examination($name, $game)
     } elseif ($game == 5) {
         [$task, $truResult] = prime();
     }
-    line("Вопрос: {$task}");
-    $answer = prompt('Ваш ответ?');
+    line("Question: {$task}");
+    $answer = prompt('Your answer');
     if ($answer == $truResult) {
-        line("Ваш ответ: {$answer}");
-        line('Правильно!');
+        line('Correct!');
         $count += 1;
     } else {
-        line("Ваш ответ: {$answer}");
-        line("Ответ '$answer' не верный, правильный ответ будет '$truResult'");
-        line("Попробуйте еще раз {$name}!");
+        line("'$answer' is wrong answer ;(. Correct answer was '$truResult'");
+        line("Let's try again, {$name}!");
         exit;
     }
     }
