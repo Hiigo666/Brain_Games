@@ -8,9 +8,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function Cli\line;
-use function Cli\prompt;
+use function Php\Project\Cli\greeting;
 
-line('Welcome to the Brain Games!');
-$name = prompt('May I have your name?');
-line("Hello, %s!", $name);
+greeting();
