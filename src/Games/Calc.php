@@ -22,6 +22,7 @@ function calc()
             break;
         default:
             echo "Invalid operator";
+            exit;
     }
     $question = "{$quest}";
     $return = [$question, $result];
