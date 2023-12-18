@@ -22,7 +22,7 @@ make validate
 ```
 
 ## launching games
-```bash
+
 make brain-games
 <a href="https://asciinema.org/a/627522" target="_blank"><img src="https://asciinema.org/a/627522.svg" /></a>
 make brain-calc
@@ -30,4 +30,4 @@ make brain-even
 make brain-gcd
 make brain-prime
 make brain-progression
-```
+
