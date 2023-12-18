@@ -23,7 +23,7 @@ make validate
 
 ## launching games
 
-make brain-games <script async id="asciicast-627522" src="https://asciinema.org/a/627522.js"></script>
+make brain-games https://asciinema.org/a/627522
 make brain-calc
 make brain-even
 make brain-gcd
