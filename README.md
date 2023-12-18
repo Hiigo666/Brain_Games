@@ -18,5 +18,15 @@
 git clone https://github.com/Hiigo666/php-project-45.git
 cd php-project-45
 make install
+make validate
 ```
 
+## launching games
+```bash
+make brain-games
+make brain-calc
+make brain-even
+make brain-gcd
+make brain-prime
+make brain-progression
+```
