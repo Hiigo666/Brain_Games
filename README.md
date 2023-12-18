@@ -23,7 +23,7 @@ make validate
 
 ## launching games
 ```bash
-make brain-games https://asciinema.org/a/627522
+make brain-games [asciinema]([url](https://asciinema.org/a/627522))
 make brain-calc
 make brain-even
 make brain-gcd
