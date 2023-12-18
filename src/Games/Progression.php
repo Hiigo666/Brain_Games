@@ -1,11 +1,11 @@
 <?php
 
-namespace Games\Prog;
+namespace Games\Progression;
 
-function prog()
+function progression()
 {
-    $lenArr = mt_rand(5, 10);
-    $step1 = mt_rand(1, 10);
+    $lenArr = mt_rand(5, 10); // Генерируем длину массива
+    $step1 = mt_rand(1, 10); // Генерируем шаг прогрессии
     $step = 0;
     $result = [];
     for ($i = 1; $i <= $lenArr; $i++) {
@@ -15,8 +15,6 @@ function prog()
     $randSimpol = mt_rand(1, $lenArr) - 1;
     $trueResult = $result[$randSimpol];
     $result[$randSimpol] = "..";
-    $bin = [implode(" ", $result), $randSimpol, $trueResult];
-    // print_r($bin);
     $return = [implode(" ", $result), $trueResult];
     return $return;
 }

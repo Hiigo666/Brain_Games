@@ -7,7 +7,7 @@ use function cli\prompt;
 use function Games\Calc\calc;
 use function Games\Even\even;
 use function Games\Nod\nod;
-use function Games\Prog\prog;
+use function Games\Progression\progression;
 use function Games\Prime\prime;
 
 function greeting()
@@ -57,7 +57,7 @@ function examination(?string $name, ?int $game)
         } elseif ($game == 3) {
             [$task, $truResult] = nod();
         } elseif ($game == 4) {
-            [$task, $truResult] = prog();
+            [$task, $truResult] = progression();
         } elseif ($game == 5) {
             [$task, $truResult] = prime();
         }
