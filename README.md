@@ -23,8 +23,7 @@ make validate
 
 ## launching games
 
-make brain-games
-<a href="https://asciinema.org/a/627522" target="_blank"><img src="https://asciinema.org/a/627522.svg" /></a>
+make brain-games [![asciicast](https://asciinema.org/a/627522.svg)](https://asciinema.org/a/627522)
 make brain-calc
 make brain-even
 make brain-gcd
