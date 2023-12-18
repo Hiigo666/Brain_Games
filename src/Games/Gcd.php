@@ -1,11 +1,13 @@
 <?php
 
-namespace Games\Nod;
+namespace Project\Games\Gcd;
 
-function nod()
+function gcd()
 {
-    $number1 = mt_rand(1, 100);
-    $number2 = mt_rand(1, 100);
+    $minNumber = 1;
+    $maxNumber = 100;
+    $number1 = mt_rand($minNumber, $maxNumber);
+    $number2 = mt_rand($minNumber, $maxNumber);
     $question = "{$number1} {$number2}";
     $maxNumber = max($number1, $number2);
     $nod = 1;

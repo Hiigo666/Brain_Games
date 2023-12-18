@@ -1,10 +1,12 @@
 <?php
 
-namespace Games\Even;
+namespace Project\Games\Even;
 
 function even()
 {
-    $quest = mt_rand(0, 100);
+    $minNumber = 1;
+    $maxNumber = 100;
+    $quest = mt_rand($minNumber, $maxNumber);
     if ($quest % 2 === 0) {
         $result = "yes";
     } else {

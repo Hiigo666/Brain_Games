@@ -1,13 +1,15 @@
 <?php
 
-namespace Games\Calc;
+namespace Project\Games\Calc;
 
 function calc()
 {
+    $minNumber = 0;
+    $maxNumber = 20;
     $result = 0;
     $operators = ["+", "-", "*"];
-    $number1 = mt_rand(0, 20);
-    $number2 = mt_rand(0, 10);
+    $number1 = mt_rand($minNumber, $maxNumber);
+    $number2 = mt_rand($minNumber, $maxNumber);
     $randomoperation = $operators[mt_rand(0, 2)];
     $quest = "{$number1} {$randomoperation} {$number2}";
     switch ($randomoperation) {

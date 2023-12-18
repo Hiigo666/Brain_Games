@@ -4,11 +4,11 @@ namespace Project\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function Games\Calc\calc;
-use function Games\Even\even;
-use function Games\Nod\nod;
-use function Games\Progression\progression;
-use function Games\Prime\prime;
+use function Project\Games\Calc\calc;
+use function Project\Games\Even\even;
+use function Project\Games\Gcd\gcd;
+use function Project\Games\Progression\progression;
+use function Project\Games\Prime\prime;
 
 function greeting()
 {
@@ -47,13 +47,14 @@ function examination(?string $game)
     $truResult = "";
     $task = "";
     $count = 0;
-    while ($count < 3) {
+    $maxCount = 3;
+    while ($count < $maxCount) {
         if ($game == "calc") {
             [$task, $truResult] = calc();
         } elseif ($game == "even") {
             [$task, $truResult] = even();
         } elseif ($game == "gcd") {
-            [$task, $truResult] = nod();
+            [$task, $truResult] = gcd();
         } elseif ($game == "progression") {
             [$task, $truResult] = progression();
         } elseif ($game == "prime") {

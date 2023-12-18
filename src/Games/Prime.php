@@ -1,11 +1,13 @@
 <?php
 
-namespace Games\Prime;
+namespace Project\Games\Prime;
 
 function prime()
 {
+    $minNumber = 1;
+    $maxNumber = 20;
     $trueAnswer = "yes";
-    $symbol = mt_rand(1, 20);
+    $symbol = mt_rand($minNumber, $maxNumber);
     if ($symbol <= 1) {
         $trueAnswer = "no";
     }
