@@ -8,8 +8,8 @@ function progression()
     $maxLen = 10;
     $minProgression = 3;
     $maxProgression = 15;
-    $lenArr = mt_rand($minLen, $maxLen); 
-    $stepProgression = mt_rand($minProgression, $maxProgression); 
+    $lenArr = mt_rand($minLen, $maxLen);
+    $stepProgression = mt_rand($minProgression, $maxProgression);
     $step = 0;
     $result = [];
     for ($i = 1; $i <= $lenArr; $i++) {
