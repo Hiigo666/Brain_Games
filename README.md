@@ -22,11 +22,11 @@ make validate
 ```
 
 ## launching games
-
-make brain-games [asciinema]([url](https://asciinema.org/a/627522))
-make brain-calc
-make brain-even
-make brain-gcd
-make brain-prime
-make brain-progression
+#click on the link to see asciinema
+* make [brain-games](https://asciinema.org/a/627522)
+* make [brain-calc](https://asciinema.org/a/627525)
+* make [brain-even](https://asciinema.org/a/627526)
+* make [brain-gcd](https://asciinema.org/a/627528)
+* make [brain-prime](https://asciinema.org/a/627529)  
+* make [brain-progression](https://asciinema.org/a/627530)
 
