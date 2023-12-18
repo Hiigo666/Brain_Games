@@ -9,11 +9,5 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function Project\Engine\examination;
-use function Project\Engine\greeting;
-use function Project\Engine\End;
-use function Project\Engine\intro;
 
-$name = greeting();
-intro(3);
-examination($name, 3);
-End($name);
+examination("gcd");

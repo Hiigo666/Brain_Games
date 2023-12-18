@@ -18,47 +18,45 @@ function greeting()
     return $name;
 }
 
-function intro(?int $game)
+function intro(?string $game)
 {
     switch ($game) {
-        case 1:
+        case "calc":
             line("What is the result of the expression?");
             break;
-        case 2:
+        case "even":
             line('Answer "yes" if the number is even, otherwise answer "no".');
             break;
-        case 3:
+        case "gcd":
             line("Find the greatest common divisor of given numbers.");
             break;
-        case 4:
+        case "progression":
             line("What number is missing in the progression?");
             break;
-        case 5:
+        case "prime":
             line('Answer "yes" if given number is prime. Otherwise answer "no".');
             break;
     }
 }
-function End(?string $user)
-{
-    line("Congratulations, {$user}!");
-}
 
 
-function examination(?string $name, ?int $game)
+function examination(?string $game)
 {
+    $name = greeting();
+    intro($game);
     $truResult = "";
     $task = "";
     $count = 0;
     while ($count < 3) {
-        if ($game == 1) {
+        if ($game == "calc") {
             [$task, $truResult] = calc();
-        } elseif ($game == 2) {
+        } elseif ($game == "even") {
             [$task, $truResult] = even();
-        } elseif ($game == 3) {
+        } elseif ($game == "gcd") {
             [$task, $truResult] = nod();
-        } elseif ($game == 4) {
+        } elseif ($game == "progression") {
             [$task, $truResult] = progression();
-        } elseif ($game == 5) {
+        } elseif ($game == "prime") {
             [$task, $truResult] = prime();
         }
         line("Question: {$task}");
@@ -72,4 +70,5 @@ function examination(?string $name, ?int $game)
             exit;
         }
     }
+    line("Congratulations, {$name}!");
 }
