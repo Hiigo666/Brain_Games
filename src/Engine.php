@@ -4,69 +4,50 @@ namespace Project\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function Project\Games\Calc\calc;
-use function Project\Games\Even\even;
-use function Project\Games\Gcd\gcd;
-use function Project\Games\Progression\progression;
-use function Project\Games\Prime\prime;
 
-function greeting()
+const COUNT = 3;
+
+/*function intro($game)
+{
+    switch ($game) {
+    case "even":
+        line('Answer "yes" if the number is even, otherwise answer "no".');
+        break;
+    case "gcd":
+        line("Find the greatest common divisor of given numbers.");
+        break;
+    case "progression":
+        line("What number is missing in the progression?");
+        break;
+    case "prime":
+        line('Answer "yes" if given number is prime. Otherwise answer "no".');
+        break;
+    }
+}
+*/
+
+function examination($dateGame, $describe)
 {
     line("Welcome to the Brain Games!");
     $name = prompt('May I have your name?', false, ' ');
     line("Hello, %s!", $name);
-    return $name;
-}
+    line($describe);
 
-function intro(?string $game)
-{
-    switch ($game) {
-        case "calc":
-            line("What is the result of the expression?");
-            break;
-        case "even":
-            line('Answer "yes" if the number is even, otherwise answer "no".');
-            break;
-        case "gcd":
-            line("Find the greatest common divisor of given numbers.");
-            break;
-        case "progression":
-            line("What number is missing in the progression?");
-            break;
-        case "prime":
-            line('Answer "yes" if given number is prime. Otherwise answer "no".');
-            break;
+    $tasks = [];
+    $results = [];
+
+    foreach ($dateGame as [$task, $result]) {
+        $tasks[] = $task;
+        $results[] = $result;
     }
-}
 
-
-function examination(?string $game)
-{
-    $name = greeting();
-    intro($game);
-    $truResult = "";
-    $task = "";
-    $count = 0;
-    $maxCount = 3;
-    while ($count < $maxCount) {
-        if ($game == "calc") {
-            [$task, $truResult] = calc();
-        } elseif ($game == "even") {
-            [$task, $truResult] = even();
-        } elseif ($game == "gcd") {
-            [$task, $truResult] = gcd();
-        } elseif ($game == "progression") {
-            [$task, $truResult] = progression();
-        } elseif ($game == "prime") {
-            [$task, $truResult] = prime();
-        }
-        line("Question: {$task}");
+    for ($i = 0; $i < COUNT; $i++) {
+        line("Question: {$tasks[$i]}");
         $answer = prompt('Your answer');
-        if ($answer == $truResult) {
+        if ($answer == $results[$i]) {
             line('Correct!');
-            $count += 1;
         } else {
-            line("'$answer' is wrong answer ;(. Correct answer was '$truResult'");
+            line("'$answer' is wrong answer ;(. Correct answer was '$results[$i]'");
             line("Let's try again, {$name}!");
             exit;
         }
