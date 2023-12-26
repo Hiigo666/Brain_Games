@@ -52,5 +52,5 @@ function examination($dateGame, $describe)
             exit;
         }
     }
-    line("Congratulations, {$name}!");
+    line("Congratulations, %s!", $name);
 }
