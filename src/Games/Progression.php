@@ -2,25 +2,37 @@
 
 namespace Project\Games\Progression;
 
-function progression()
+use function Project\Engine\examination;
+
+use const Project\Engine\COUNT;
+
+const DESCRIBE = 'What number is missing in the progression?';
+const MIN_NUMBER = 1;
+const MAX_START_NUMBER = 20;
+const MAX_NUMBER = 100;
+const MIN_INDEX = 6;
+const MAX_INDEX = 10;
+
+function prog()
 {
-    $minLen = 5;
-    $maxLen = 10;
-    $minProgression = 3;
-    $maxProgression = 15;
-    $lenArr = mt_rand($minLen, $maxLen);
-    $stepProgression = mt_rand($minProgression, $maxProgression);
-    $step = 0;
-    $result = [];
-    for ($i = 1; $i <= $lenArr; $i++) {
-        $step = $stepProgression;
-        $result[] = $step * $i;
+    for ($j = 0; $j < COUNT; $j++) {
+        do {
+            $start = mt_rand(MIN_NUMBER, MAX_START_NUMBER);
+            $finish = mt_rand($start * 2, MAX_NUMBER);
+            $step = $start;
+            $genArr = range($start, $finish, $step);
+            $i = count($genArr);
+        } while ($i < MIN_INDEX || $i > MAX_INDEX);
+
+        $randSimpol = mt_rand(0, count($genArr)- 1);
+        $trueResult = $genArr[$randSimpol];
+        $genArr[$randSimpol] = "..";
+        $return[] = [implode(" ", $genArr), $trueResult];
     }
-    $startLocation = 0;
-    $finishLocation = $lenArr - 1;
-    $randSimpol = mt_rand($startLocation, $finishLocation);
-    $trueResult = $result[$randSimpol];
-    $result[$randSimpol] = "..";
-    $return = [implode(" ", $result), $trueResult];
     return $return;
+}
+
+function run()
+{
+    examination(prog(), DESCRIBE);
 }
