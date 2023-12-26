@@ -2,31 +2,50 @@
 
 namespace Project\Games\Calc;
 
-function calc()
+use function Project\Engine\examination;
+
+use const Project\Engine\COUNT;
+
+const DESCRIBE = "What is the result of the expression?";
+const MIN_NUMBER = 0;
+const MAX_NUMBER = 20;
+const OPERATORS = ["+", "-", "*"];
+
+function createTask()
 {
-    $minNumber = 0;
-    $maxNumber = 20;
-    $result = 0;
-    $operators = ["+", "-", "*"];
-    $number1 = mt_rand($minNumber, $maxNumber);
-    $number2 = mt_rand($minNumber, $maxNumber);
-    $randomoperation = $operators[mt_rand(0, 2)];
-    $quest = "{$number1} {$randomoperation} {$number2}";
-    switch ($randomoperation) {
+    for ($i = 0; $i < COUNT; $i++) {
+        $number1 = mt_rand(MIN_NUMBER, MAX_NUMBER);
+        $number2 = mt_rand(MIN_NUMBER, MAX_NUMBER);
+        $operator = OPERATORS[mt_rand(0, 2)];
+        $result = calc($number1, $number2, $operator);
+        $quest = "{$number1} {$operator} {$number2}";
+        $task = "{$quest}";
+        $createtask[] = [$task, $result];
+    }
+    return $createtask;
+}
+
+
+function calc($num1, $num2, $operator)
+{
+    switch ($operator) {
         case "+":
-            $result = $number1 + $number2;
+            $result = $num1 + $num2;
             break;
         case "-":
-            $result = $number1 - $number2;
+            $result = $num1 - $num2;
             break;
         case "*":
-            $result = $number1 * $number2;
+            $result = $num1 * $num2;
             break;
         default:
             echo "Invalid operator";
-            exit;
+            break;
     }
-    $question = "{$quest}";
-    $return = [$question, $result];
-    return $return;
+    return $result;
+}
+
+function run()
+{
+    examination(createTask(), DESCRIBE);
 }
