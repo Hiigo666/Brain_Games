@@ -24,7 +24,7 @@ function progression()
             $i = count($genArr);
         } while ($i < MIN_INDEX || $i > MAX_INDEX);
 
-        $randSimpol = mt_rand(0, count($genArr)- 1);
+        $randSimpol = mt_rand(0, count($genArr) - 1);
         $trueResult = $genArr[$randSimpol];
         $genArr[$randSimpol] = "..";
         $return[] = [implode(" ", $genArr), $trueResult];
