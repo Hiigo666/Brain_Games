@@ -13,7 +13,7 @@ const MAX_NUMBER = 100;
 const MIN_INDEX = 6;
 const MAX_INDEX = 10;
 
-function prog()
+function progression()
 {
     for ($j = 0; $j < COUNT; $j++) {
         do {
@@ -34,5 +34,5 @@ function prog()
 
 function run()
 {
-    examination(prog(), DESCRIBE);
+    examination(progression(), DESCRIBE);
 }
