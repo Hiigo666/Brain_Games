@@ -12,6 +12,7 @@ const MAX_NUMBER = 100;
 
 function even()
 {
+    $even = [];
     for ($i = 0; $i < COUNT; $i++) {
         $task = mt_rand(MIN_NUMBER, MAX_NUMBER);
         if ($task % 2 === 0) {

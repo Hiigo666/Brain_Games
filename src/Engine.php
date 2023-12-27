@@ -26,7 +26,7 @@ const COUNT = 3;
 }
 */
 
-function examination($dateGame, $describe)
+function examination(array $dateGame, string $describe)
 {
     line("Welcome to the Brain Games!");
     $name = prompt('May I have your name?', false, ' ');

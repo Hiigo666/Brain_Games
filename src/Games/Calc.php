@@ -13,6 +13,7 @@ const OPERATORS = ["+", "-", "*"];
 
 function createTask()
 {
+    $createtask = [];
     for ($i = 0; $i < COUNT; $i++) {
         $number1 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $number2 = mt_rand(MIN_NUMBER, MAX_NUMBER);
@@ -26,8 +27,9 @@ function createTask()
 }
 
 
-function calc($num1, $num2, $operator)
+function calc(int $num1, int $num2, string $operator)
 {
+    $result = 0;
     switch ($operator) {
         case "+":
             $result = $num1 + $num2;

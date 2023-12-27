@@ -12,6 +12,9 @@ const MAX_NUMBER = 20;
 
 function prime()
 {
+    $prime = [];
+    $symbol = 0;
+    $trueAnswer = '';
     for ($j = 0; $j < COUNT; $j++) {
         $symbol = mt_rand(MIN_NUMBER, MAX_NUMBER);
         if (isPrime($symbol)) {
@@ -30,7 +33,7 @@ function run()
     examination(prime(), DESCRIBE);
 }
 
-function isPrime($number)
+function isPrime(int $number)
 {
     if ($number < 2) {
         return false;

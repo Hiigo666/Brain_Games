@@ -15,6 +15,7 @@ const MAX_INDEX = 10;
 
 function progression()
 {
+    $progression = [];
     for ($j = 0; $j < COUNT; $j++) {
         do {
             $start = mt_rand(MIN_NUMBER, MAX_START_NUMBER);
@@ -27,9 +28,9 @@ function progression()
         $randSimpol = mt_rand(0, count($genArr) - 1);
         $trueResult = $genArr[$randSimpol];
         $genArr[$randSimpol] = "..";
-        $return[] = [implode(" ", $genArr), $trueResult];
+        $progression[] = [implode(" ", $genArr), $trueResult];
     }
-    return $return;
+    return $progression;
 }
 
 function run()

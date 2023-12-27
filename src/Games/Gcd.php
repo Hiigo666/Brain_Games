@@ -12,6 +12,7 @@ const MAX_NUMBER = 100;
 
 function gcd()
 {
+    $gcd = [];
     for ($i = 0; $i < COUNT; $i++) {
         $number1 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $number2 = mt_rand(MIN_NUMBER, MAX_NUMBER);
@@ -23,9 +24,9 @@ function gcd()
                 $nod = $j;
             }
         }
-        $return[] = [$question, $nod];
+        $gcd[] = [$question, $nod];
     }
-        return $return;
+        return $gcd;
 }
 
 function run()
