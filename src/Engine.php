@@ -48,7 +48,7 @@ function examination($dateGame, $describe)
             line('Correct!');
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$results[$i]'");
-            line("Let's try again, {$name}!");
+            line("Let's try again, %s!", $name);
             exit;
         }
     }
