@@ -12,23 +12,34 @@ const MAX_NUMBER = 20;
 
 function prime()
 {
-    $trueAnswer = "yes";
     for ($j = 0; $j < COUNT; $j++) {
         $symbol = mt_rand(MIN_NUMBER, MAX_NUMBER);
-        if ($symbol <= 1) {
+        if (isPrime($symbol)) {
+            $trueAnswer = "yes";
+        } else {
             $trueAnswer = "no";
-        }
-        for ($i = 2; $i <= sqrt($symbol); $i++) {
-            if ($symbol % $i == 0) {
-                $trueAnswer = "no";
-            }
         }
         $prime[] = [$symbol, $trueAnswer];
     }
+    $prime[] = [$symbol, $trueAnswer];
     return $prime;
 }
 
 function run()
 {
     examination(prime(), DESCRIBE);
+}
+
+function isPrime($number) {
+    if ($number < 2) {
+        return false;
+    }
+    
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i === 0) {
+            return false;
+        }
+    }
+    
+    return true;
 }
