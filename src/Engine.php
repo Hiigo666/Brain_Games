@@ -7,25 +7,6 @@ use function cli\prompt;
 
 const COUNT = 3;
 
-/*function intro($game)
-{
-    switch ($game) {
-    case "even":
-        line('Answer "yes" if the number is even, otherwise answer "no".');
-        break;
-    case "gcd":
-        line("Find the greatest common divisor of given numbers.");
-        break;
-    case "progression":
-        line("What number is missing in the progression?");
-        break;
-    case "prime":
-        line('Answer "yes" if given number is prime. Otherwise answer "no".');
-        break;
-    }
-}
-*/
-
 function examination(array $dateGame, string $describe)
 {
     line("Welcome to the Brain Games!");
