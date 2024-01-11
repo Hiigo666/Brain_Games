@@ -10,22 +10,27 @@ const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 
-function even()
+function generateData()
 {
-    $even = [];
+    $Data = [];
     for ($i = 0; $i < ROUNDS; $i++) {
-        $task = mt_rand(MIN_NUMBER, MAX_NUMBER);
-        if ($task % 2 === 0) {
+        $questioin = mt_rand(MIN_NUMBER, MAX_NUMBER);
+        if (even($questioin)) {
             $result = "yes";
         } else {
             $result = "no";
         }
-        $even[] = [$task, $result];
+        $Data[] = [$questioin, $result];
     }
-    return $even;
+    return $Data;
+}
+
+function even(int $num)
+{
+    return $num % 2 === 0;
 }
 
 function run()
 {
-    examination(even(), GAME_DESCRIPTION);
+    examination(generateData(), GAME_DESCRIPTION);
 }
