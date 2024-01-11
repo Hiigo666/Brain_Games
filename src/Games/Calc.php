@@ -13,17 +13,16 @@ const OPERATORS = ["+", "-", "*"];
 
 function createTask()
 {
-    $createtask = [];
+    $createTask = [];
     for ($i = 0; $i < ROUNDS; $i++) {
         $number1 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $number2 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $operator = OPERATORS[mt_rand(0, 2)];
         $result = calc($number1, $number2, $operator);
-        $quest = "{$number1} {$operator} {$number2}";
-        $task = "{$quest}";
-        $createtask[] = [$task, $result];
+        $questioin = "{$number1} {$operator} {$number2}";
+        $createTask[] = [$questioin, $result];
     }
-    return $createtask;
+    return $createTask;
 }
 
 
