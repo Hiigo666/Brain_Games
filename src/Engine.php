@@ -18,11 +18,11 @@ function examination(array $dateGame, string $describe)
 
     foreach ($dateGame as [$task, $result]) {
         $tasks[] = $task;
-        $results[] = $result;
+        $results[] = (string)$result;
     }
     for ($i = 0; $i < ROUNDS; $i++) {
         line("Question: {$tasks[$i]}");
-        $answer = (int)prompt('Your answer');
+        $answer = prompt('Your answer');
         var_dump($answer);
         if ($answer === $results[$i]) {
             line('Correct!');
