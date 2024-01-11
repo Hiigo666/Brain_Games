@@ -17,19 +17,25 @@ function generateData()
         $number1 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $number2 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $question = "{$number1} {$number2}";
-        $maxNumber = max($number1, $number2);
-        $result = 1;
-        for ($j = 1; $j <= $maxNumber; $j++) {
-            if ($number1 % $j === 0 && $number2 % $j === 0) {
-                $result = $j;
-            }
-        }
+        $result = gcd($number1, $number2);
         $data[] = [$question, $result];
     }
-        return $data;
+    return $data;
 }
 
 function run()
 {
     examination(generateData(), GAME_DESCRIPTION);
+}
+
+function gcd(int $number1, int $number2)
+{
+    $maxNumber = max($number1, $number2);
+    $result = 1;
+    for ($j = 1; $j <= $maxNumber; $j++) {
+        if ($number1 % $j === 0 && $number2 % $j === 0) {
+            $result = $j;
+        }
+    }
+    return $result;
 }

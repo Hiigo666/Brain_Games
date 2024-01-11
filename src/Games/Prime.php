@@ -10,23 +10,23 @@ const GAME_DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answe
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 20;
 
-function prime()
+function generateData()
 {
-    $prime = [];
+    $data = [];
     $question = 0;
     $result = '';
     for ($j = 0; $j < ROUNDS; $j++) {
         $question = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $result = isPrime($question) ? 'yes' : 'no';
-        $prime[] = [$question, $result];
+        $data[] = [$question, $result];
     }
-    $prime[] = [$question, $result];
-    return $prime;
+    $data[] = [$question, $result];
+    return $data;
 }
 
 function run()
 {
-    examination(prime(), GAME_DESCRIPTION);
+    examination(generateData(), GAME_DESCRIPTION);
 }
 
 function isPrime(int $number)
