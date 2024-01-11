@@ -10,26 +10,26 @@ const GAME_DESCRIPTION = "Find the greatest common divisor of given numbers.";
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 
-function gcd()
+function generateData()
 {
-    $gcd = [];
+    $data = [];
     for ($i = 0; $i < ROUNDS; $i++) {
         $number1 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $number2 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $question = "{$number1} {$number2}";
         $maxNumber = max($number1, $number2);
-        $nod = 1;
+        $result = 1;
         for ($j = 1; $j <= $maxNumber; $j++) {
             if ($number1 % $j === 0 && $number2 % $j === 0) {
-                $nod = $j;
+                $result = $j;
             }
         }
-        $gcd[] = [$question, $nod];
+        $data[] = [$question, $result];
     }
-        return $gcd;
+        return $data;
 }
 
 function run()
 {
-    examination(gcd(), GAME_DESCRIPTION);
+    examination(generateData(), GAME_DESCRIPTION);
 }

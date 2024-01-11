@@ -11,18 +11,18 @@ const MIN_NUMBER = 0;
 const MAX_NUMBER = 20;
 const OPERATORS = ["+", "-", "*"];
 
-function createTask()
+function generateData()
 {
-    $createTask = [];
+    $Data = [];
     for ($i = 0; $i < ROUNDS; $i++) {
         $number1 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $number2 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $operator = OPERATORS[mt_rand(0, 2)];
         $result = calc($number1, $number2, $operator);
         $questioin = "{$number1} {$operator} {$number2}";
-        $createTask[] = [$questioin, $result];
+        $Data[] = [$questioin, $result];
     }
-    return $createTask;
+    return $Data;
 }
 
 
@@ -48,5 +48,5 @@ function calc(int $num1, int $num2, string $operator)
 
 function run()
 {
-    examination(createTask(), GAME_DESCRIPTION);
+    examination(generateData(), GAME_DESCRIPTION);
 }

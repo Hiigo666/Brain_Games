@@ -13,18 +13,18 @@ const MAX_NUMBER = 20;
 function prime()
 {
     $prime = [];
-    $symbol = 0;
-    $trueAnswer = '';
+    $question = 0;
+    $result = '';
     for ($j = 0; $j < ROUNDS; $j++) {
-        $symbol = mt_rand(MIN_NUMBER, MAX_NUMBER);
-        if (isPrime($symbol)) {
-            $trueAnswer = "yes";
+        $question = mt_rand(MIN_NUMBER, MAX_NUMBER);
+        if (isPrime($question)) {
+            $result = "yes";
         } else {
-            $trueAnswer = "no";
+            $result = "no";
         }
-        $prime[] = [$symbol, $trueAnswer];
+        $prime[] = [$question, $result];
     }
-    $prime[] = [$symbol, $trueAnswer];
+    $prime[] = [$question, $result];
     return $prime;
 }
 
