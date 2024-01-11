@@ -4,7 +4,7 @@ namespace Project\Games\Prime;
 
 use function Project\Engine\examination;
 
-use const Project\Engine\COUNT;
+use const Project\Engine\ROUNDS;
 
 const DESCRIBE = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const MIN_NUMBER = 1;
@@ -15,7 +15,7 @@ function prime()
     $prime = [];
     $symbol = 0;
     $trueAnswer = '';
-    for ($j = 0; $j < COUNT; $j++) {
+    for ($j = 0; $j < ROUNDS; $j++) {
         $symbol = mt_rand(MIN_NUMBER, MAX_NUMBER);
         if (isPrime($symbol)) {
             $trueAnswer = "yes";

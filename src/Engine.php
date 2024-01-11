@@ -5,7 +5,7 @@ namespace Project\Engine;
 use function cli\line;
 use function cli\prompt;
 
-const COUNT = 3;
+const ROUNDS = 3;
 
 function examination(array $dateGame, string $describe)
 {
@@ -22,7 +22,7 @@ function examination(array $dateGame, string $describe)
         $results[] = $result;
     }
 
-    for ($i = 0; $i < COUNT; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         line("Question: {$tasks[$i]}");
         $answer = prompt('Your answer');
         if ($answer == $results[$i]) {

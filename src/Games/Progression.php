@@ -4,7 +4,7 @@ namespace Project\Games\Progression;
 
 use function Project\Engine\examination;
 
-use const Project\Engine\COUNT;
+use const Project\Engine\ROUNDS;
 
 const DESCRIBE = 'What number is missing in the progression?';
 const MIN_NUMBER = 1;
@@ -16,7 +16,7 @@ const MAX_INDEX = 10;
 function progression()
 {
     $progression = [];
-    for ($j = 0; $j < COUNT; $j++) {
+    for ($j = 0; $j < ROUNDS; $j++) {
         do {
             $start = mt_rand(MIN_NUMBER, MAX_START_NUMBER);
             $finish = mt_rand($start * 2, MAX_NUMBER);

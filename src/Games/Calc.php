@@ -4,7 +4,7 @@ namespace Project\Games\Calc;
 
 use function Project\Engine\examination;
 
-use const Project\Engine\COUNT;
+use const Project\Engine\ROUNDS;
 
 const DESCRIBE = "What is the result of the expression?";
 const MIN_NUMBER = 0;
@@ -14,7 +14,7 @@ const OPERATORS = ["+", "-", "*"];
 function createTask()
 {
     $createtask = [];
-    for ($i = 0; $i < COUNT; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $number1 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $number2 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $operator = OPERATORS[mt_rand(0, 2)];
