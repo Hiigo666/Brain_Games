@@ -17,11 +17,7 @@ function prime()
     $result = '';
     for ($j = 0; $j < ROUNDS; $j++) {
         $question = mt_rand(MIN_NUMBER, MAX_NUMBER);
-        if (isPrime($question)) {
-            $result = "yes";
-        } else {
-            $result = "no";
-        }
+        $result = isPrime($question) ? 'yes' : 'no';
         $prime[] = [$question, $result];
     }
     $prime[] = [$question, $result];

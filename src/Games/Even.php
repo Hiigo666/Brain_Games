@@ -15,11 +15,7 @@ function generateData()
     $Data = [];
     for ($i = 0; $i < ROUNDS; $i++) {
         $questioin = mt_rand(MIN_NUMBER, MAX_NUMBER);
-        if (even($questioin)) {
-            $result = "yes";
-        } else {
-            $result = "no";
-        }
+        $result = even($questioin) ? 'yes' : 'no';
         $Data[] = [$questioin, $result];
     }
     return $Data;
