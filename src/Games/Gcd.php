@@ -6,7 +6,7 @@ use function Project\Engine\examination;
 
 use const Project\Engine\ROUNDS;
 
-const DESCRIBE = "Find the greatest common divisor of given numbers.";
+const GAME_DESCRIPTION = "Find the greatest common divisor of given numbers.";
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 
@@ -31,5 +31,5 @@ function gcd()
 
 function run()
 {
-    examination(gcd(), DESCRIBE);
+    examination(gcd(), GAME_DESCRIPTION);
 }

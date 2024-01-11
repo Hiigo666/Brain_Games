@@ -6,7 +6,7 @@ use function Project\Engine\examination;
 
 use const Project\Engine\ROUNDS;
 
-const DESCRIBE = "What is the result of the expression?";
+const GAME_DESCRIPTION = "What is the result of the expression?";
 const MIN_NUMBER = 0;
 const MAX_NUMBER = 20;
 const OPERATORS = ["+", "-", "*"];
@@ -49,5 +49,5 @@ function calc(int $num1, int $num2, string $operator)
 
 function run()
 {
-    examination(createTask(), DESCRIBE);
+    examination(createTask(), GAME_DESCRIPTION);
 }

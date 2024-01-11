@@ -6,7 +6,7 @@ use function Project\Engine\examination;
 
 use const Project\Engine\ROUNDS;
 
-const DESCRIBE = 'What number is missing in the progression?';
+const GAME_DESCRIPTION = 'What number is missing in the progression?';
 const MIN_NUMBER = 1;
 const MAX_START_NUMBER = 20;
 const MAX_NUMBER = 100;
@@ -35,5 +35,5 @@ function progression()
 
 function run()
 {
-    examination(progression(), DESCRIBE);
+    examination(progression(), GAME_DESCRIPTION);
 }

@@ -6,7 +6,7 @@ use function Project\Engine\examination;
 
 use const Project\Engine\ROUNDS;
 
-const DESCRIBE = 'Answer "yes" if the number is even, otherwise answer "no".';
+const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 
@@ -27,5 +27,5 @@ function even()
 
 function run()
 {
-    examination(even(), DESCRIBE);
+    examination(even(), GAME_DESCRIPTION);
 }
