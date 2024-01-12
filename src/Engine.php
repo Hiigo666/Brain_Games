@@ -8,22 +8,21 @@ use function cli\prompt;
 
 const ROUNDS = 3;
 
-function examination(array $dateGame, string $describe)
+function examination(array $dataGame, string $describe)
 {
     $name = greeting();
     line($describe);
 
-    $tasks = [];
+    $questions = [];
     $results = [];
 
-    foreach ($dateGame as [$task, $result]) {
-        $tasks[] = $task;
+    foreach ($dataGame as [$question, $result]) {
+        $questions[] = $question;
         $results[] = (string)$result;
     }
     for ($i = 0; $i < ROUNDS; $i++) {
-        line("Question: {$tasks[$i]}");
+        line("Question: {$questions[$i]}");
         $answer = prompt('Your answer');
-        var_dump($answer);
         if ($answer === $results[$i]) {
             line('Correct!');
         } else {
@@ -32,5 +31,5 @@ function examination(array $dateGame, string $describe)
             exit;
         }
     }
-    line("Congratulations, %s!", $name);
+    line('Congratulations, %s!', $name);
 }

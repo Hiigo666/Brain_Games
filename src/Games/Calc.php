@@ -13,16 +13,16 @@ const OPERATORS = ["+", "-", "*"];
 
 function generateData()
 {
-    $Data = [];
+    $data = [];
     for ($i = 0; $i < ROUNDS; $i++) {
         $number1 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $number2 = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $operator = OPERATORS[mt_rand(0, 2)];
         $result = calc($number1, $number2, $operator);
         $questioin = "{$number1} {$operator} {$number2}";
-        $Data[] = [$questioin, $result];
+        $data[] = [$questioin, $result];
     }
-    return $Data;
+    return $data;
 }
 
 

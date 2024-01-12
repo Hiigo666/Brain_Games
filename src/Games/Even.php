@@ -12,13 +12,13 @@ const MAX_NUMBER = 100;
 
 function generateData()
 {
-    $Data = [];
+    $data = [];
     for ($i = 0; $i < ROUNDS; $i++) {
         $questioin = mt_rand(MIN_NUMBER, MAX_NUMBER);
         $result = even($questioin) ? 'yes' : 'no';
-        $Data[] = [$questioin, $result];
+        $data[] = [$questioin, $result];
     }
-    return $Data;
+    return $data;
 }
 
 function even(int $num)
