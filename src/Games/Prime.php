@@ -20,7 +20,6 @@ function generateData()
         $result = isPrime($question) ? 'yes' : 'no';
         $data[] = [$question, $result];
     }
-    $data[] = [$question, $result];
     return $data;
 }
 
