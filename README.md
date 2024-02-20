@@ -7,7 +7,7 @@
 
 * Linux, Macos, WSL
 * PHP >=8.2
-* Make
+* Composer
 * Git
 
 
